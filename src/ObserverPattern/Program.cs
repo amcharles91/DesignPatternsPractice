@@ -19,14 +19,11 @@ namespace ObserverPattern
             var MonsterB = new MonsterB(wavePublisher, "MonsterB");
             var MonsterC = new MonsterC(wavePublisher, "MonsterC");
 
-            Console.WriteLine("Testing removal for MonsterA2");
-
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Incrementing Wave");
                 wavePublisher.NextWave();
                 Thread.Sleep(3000);
-                MonsterA2.StopSpawning(); //Stop's spawning MonsterA2 after the first wave but UnSubscribing
             }
         }
     }

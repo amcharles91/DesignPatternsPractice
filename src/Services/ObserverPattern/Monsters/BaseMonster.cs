@@ -38,12 +38,6 @@ namespace Services
             _wavePublisher.UnSubscribe(this);
         }
 
-        public virtual void Update(IPublisher publisher)
-        {
-            if (publisher is IWavePublisher)
-            {
-                SpawnMonster();
-            }
-        }
+        public abstract void Update(int wave);
     }
 }

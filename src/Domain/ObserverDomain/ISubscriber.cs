@@ -8,6 +8,6 @@
         /// <summary>
         /// Whatever you want the Publisher to provide on updates
         /// </summary>
-        void Update(IPublisher publisher);
+        void Update(int wave);
     }
 }

@@ -9,15 +9,11 @@ namespace Services
         {
         }
 
-        public override void Update(IPublisher publisher)
+        public override void Update(int wave)
         {
-            if (publisher is IWavePublisher)
+            if (wave >= 1 && wave < 3)
             {
-                var currentWave = (publisher as IWavePublisher).CurrentWave();
-                if (currentWave >= 1 && currentWave < 3)
-                {
-                    base.Update(publisher);
-                }
+                SpawnMonster();
             }
         }
     }

@@ -23,11 +23,6 @@ namespace Services
             NotifySubscribers();
         }
 
-        public int CurrentWave()
-        {
-            return _wave;
-        }
-
         /// <summary>
         /// Notifies all subscribers
         /// </summary>
@@ -37,7 +32,7 @@ namespace Services
 
             foreach (var sub in _subscribers)
             {
-                sub.Update(this);
+                sub.Update(_wave);
             }
         }
 
